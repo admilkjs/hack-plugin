@@ -1,23 +1,20 @@
-import byteNode from 'bytenode';
 import chalk from 'chalk';
-import crypto from 'crypto';
-import fs from 'fs';
-import os from 'os';
-import path from 'path';
-import protobuf from 'protobufjs';
-import { fileURLToPath } from 'url';
-import { v4 as uuidv4 } from 'uuid';
+import byteNode from 'bytenode';
 const { runBytecode } = byteNode;
 const logger = global.logger || console;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-global.Bot.hack = {};
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import os from 'os';
 let osType = os.type();
 if (osType === 'Windows_NT') {
 	osType = 'windows';
 } else {
 	osType = 'linux';
 }
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+global.Bot.hack = {};
 function log(data) {
 	if (Array.isArray(data)) {
 		return data.map((i) => log(i));
@@ -81,7 +78,7 @@ async function setICQQ() {
 }
 async function setNapCat() {}
 function getFnc(name) {
-	return fs.readFileSync(path.join(__dirname, 'fnc', name + osType));
+	return fs.readFileSync(path.join(__dirname, 'fnc', `${name}-${osType}`));
 }
 export class fakeFile extends plugin {
 	constructor() {
@@ -120,6 +117,9 @@ export class fakeFile extends plugin {
 		await e.reply(segment.raw(result));
 	}
 }
+import { v4 as uuidv4 } from 'uuid';
+import crypto from 'crypto';
+import protobuf from 'protobufjs';
 class ProtobufEncoder {
 	constructor() {
 		this.Root = null;
