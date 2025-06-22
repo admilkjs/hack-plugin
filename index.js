@@ -9,8 +9,6 @@ import { fileURLToPath } from 'url';
 import { v4 as uuidv4 } from 'uuid';
 const { runBytecode } = byteNode;
 const logger = global.logger || console;
-<<<<<<< HEAD
-=======
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
@@ -21,16 +19,9 @@ if (osType === 'Windows_NT') {
 } else {
 	osType = 'linux';
 }
->>>>>>> db621c0b733a76f40a575b9890651ad381200fc6
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 global.Bot.hack = {};
-let osType = os.type();
-if (osType === 'Windows_NT') {
-	osType = 'windows';
-} else {
-	osType = 'linux';
-}
 function log(data) {
 	if (Array.isArray(data)) {
 		return data.map((i) => log(i));
@@ -94,11 +85,7 @@ async function setICQQ() {
 }
 async function setNapCat() {}
 function getFnc(name) {
-<<<<<<< HEAD
-	return fs.readFileSync(path.join(__dirname, 'fnc', name + osType));
-=======
 	return fs.readFileSync(path.join(__dirname, 'fnc', `${name}-${osType}`));
->>>>>>> db621c0b733a76f40a575b9890651ad381200fc6
 }
 export class fakeFile extends plugin {
 	constructor() {
