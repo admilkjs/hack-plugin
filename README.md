@@ -8,3 +8,12 @@
 ## 后续会添加的功能
 
 1. 取消息
+
+## 安装方式
+```
+git clone https://github.com/admilkjs/hack-plugin ./plugins/hack-plugin
+```
+## 安装依赖
+```
+pnpm i
+```
