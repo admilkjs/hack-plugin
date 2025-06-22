@@ -49,7 +49,10 @@ if (isTRSS) {
 	try {
 		if (fs.statSync(path.join(process.cwd(), 'plugins', 'ICQQ-Plugin')).isDirectory()) setICQQ();
 	} catch {}
+} else {
+	Bot.hack.icqq = await import('icqq')
 }
+delete Bot.hack.icqq
 async function setICQQ() {
 	let icqq;
 	for (const i of ['Model', 'node_modules']) {
