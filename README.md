@@ -1,5 +1,7 @@
 # Hack-Plugin
 
+# 需要NodeJs v24
+
 ## 功能
 
 1. 为`ICQQ`添加发送`type`为`raw`的消息的能力
