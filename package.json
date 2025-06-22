@@ -1,0 +1,17 @@
+{
+	"name": "hack-plugin",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"keywords": [],
+	"author": "@Admilk",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"bytenode": "^1.5.7",
+		"chalk": "^5.4.1",
+		"fs": "0.0.1-security",
+		"path": "^0.12.7",
+		"vm": "^0.1.0"
+	}
+}
