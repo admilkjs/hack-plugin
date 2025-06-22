@@ -9,10 +9,6 @@ import { fileURLToPath } from 'url';
 import { v4 as uuidv4 } from 'uuid';
 const { runBytecode } = byteNode;
 const logger = global.logger || console;
-import path from 'path';
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-import os from 'os';
 let osType = os.type();
 if (osType === 'Windows_NT') {
 	osType = 'windows';
