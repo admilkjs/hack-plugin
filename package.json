@@ -10,8 +10,10 @@
 	"dependencies": {
 		"bytenode": "^1.5.7",
 		"chalk": "^5.4.1",
+		"crypto": "^1.0.1",
 		"fs": "0.0.1-security",
 		"path": "^0.12.7",
-		"vm": "^0.1.0"
+		"protobufjs": "^7.5.3",
+		"uuid": "^11.0.2"
 	}
 }
