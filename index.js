@@ -61,6 +61,7 @@ if (isTRSS) {
 	} catch {}
 } else {
 	Bot.hack.icqq = await import('icqq');
+setICQQ();
 }
 delete Bot.hack.icqq;
 async function setICQQ() {
