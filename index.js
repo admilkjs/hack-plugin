@@ -64,6 +64,8 @@ if (isTRSS) {
 }
 delete Bot.hack.icqq;
 async function setICQQ() {
+if (!isTRSS)
+ return 		await runBytecode(await getFnc('setRaw'));
 	let icqq;
 	for (const i of ['Model', 'node_modules']) {
 		try {
