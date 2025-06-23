@@ -15,6 +15,10 @@ if (osType === 'Windows_NT') {
 } else {
 	osType = 'linux';
 }
+if (!segment.raw)
+segment.raw = function raw(data) {
+    return { type: "raw", data }
+  }
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 global.Bot.hack = {};
