@@ -61,13 +61,12 @@ function log(data) {
 const isTRSS = !!Bot.serverHandle;
 if (isTRSS) {
 	try {
-		if (fs.statSync(path.join(process.cwd(), 'plugins', 'ICQQ-Plugin')).isDirectory()) setICQQ();
+		if (fs.statSync(path.join(process.cwd(), 'plugins', 'ICQQ-Plugin')).isDirectory()) await setICQQ();
 	} catch {}
 } else {
 	Bot.hack.icqq = await import('icqq');
-setICQQ();
+ await setICQQ();
 }
-delete Bot.hack.icqq;
 async function setICQQ() {
 if (!isTRSS)
  return 		await runBytecode(await getFnc('setRaw'));
