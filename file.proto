@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+message root {
+    optional subproto7 f7 = 7;
+    optional uint32 f1 = 1;
+}
+
+message subproto7 {
+    optional subproto2 f2 = 2;
+}
+
+message subproto2 {
+    optional string f7 = 7;
+    optional string f8 = 8;
+    optional string f4 = 4;
+    optional uint64 f3 = 3;
+    optional uint32 f1 = 1;
+    optional string f2 = 2;
+}

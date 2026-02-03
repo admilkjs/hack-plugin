@@ -1,0 +1,15 @@
+{
+	"name": "hack-plugin",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"keywords": [],
+	"author": "@Admilk",
+	"license": "ISC",
+	"description": "为 ICQQ 添加 raw 消息和假文件发送能力",
+	"dependencies": {
+		"chalk": "^5.4.1",
+		"protobufjs": "^7.5.3",
+		"uuid": "^11.0.2"
+	}
+}
